@@ -37,13 +37,13 @@ The project is structured into three main directories:
 1. **Download or clone the repository** to your local machine:
 
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/jasminaaa20/code-surge.git
     ```
 
 2. **Navigate to the project directory**:
 
     ```bash
-    cd project-directory
+    cd code-surge/01
     ```
 
 3. **Open the `index.html` file** in a browser by double-clicking on it or dragging it into your browser window.
