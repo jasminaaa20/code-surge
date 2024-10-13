@@ -1,0 +1,128 @@
+:root {
+    /* Define reusable color variables */
+    --primary-color: #173b34;
+    --secondary-color: #333;
+    --light-color: #ccc;
+    --error-color: red;
+    --focus-outline-color: #173b34;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: var(--secondary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    margin: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px; /* Set a consistent max-width for the entire form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 0 10px; /* Prevent form from touching the screen edges on small devices */
+}
+
+/* Media query for smaller devices */
+@media (max-width: 600px) {
+    form {
+        max-width: 100%; /* Allow the form to take full width on smaller screens */
+    }
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    transition: border-color 0.3s ease-in-out; /* Smooth transition to border color changes */
+}
+
+input, select, button {
+    padding: 12px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 1.1rem;
+    width: 100%; /* Ensure all form elements take 100% of the form's width */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+input:focus, select:focus, button:focus {
+    outline: 2px solid var(--focus-outline-color);
+    outline-offset: 2px;
+}
+
+/* Style for invalid inputs */
+input.invalid, select.invalid {
+    border-color: var(--error-color);
+}
+
+/* input:invalid {
+    border-color: var(--error-color);
+} */
+
+/* Style for valid inputs */
+input.valid, select.valid {
+    border-color: --primary-color;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: var(--light-color);
+    cursor: not-allowed;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    position: relative; /* Positioned relative to avoid overlapping */
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; /* Add margin to create some space above the footer */
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
